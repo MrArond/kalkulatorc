@@ -1,0 +1,56 @@
+#include <iostream>
+#include <ostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double a, b, wynik;
+    int dzialanie;
+    cout<<"Podaj liczbe a" << endl;
+    cin >> a;
+    cout<<"Podaj liczbe b" << endl;
+    cin >> b;
+    if (a > 0 || b > 0) {
+    cout << "Podaj dzialanie"<< endl;
+    
+    cout << "1. Dodawanie" << endl;
+    cout << "2. Odejmowanie" << endl;
+    cout << "3. Mnożenie" << endl;
+    cout << "4. Dzielenie" << endl;
+    cout << "5. Potęga" << endl;
+    cout << "6. Pierwiastek" << endl;
+    cin >> dzialanie;
+    switch (dzialanie) {
+        case 1:
+            wynik = a + b;
+            cout << "Twój wynik wynosi " << wynik << endl;
+            break;
+        case 2:
+            wynik = a - b;
+            cout << "Twój wynik wynosi " << wynik << endl;
+            break;
+        case 3:
+            wynik = a * b;
+            cout << "Twój wynik wynosi " << wynik << endl;
+            break;
+        case 4:
+            wynik = a / b;
+            cout << "Twój wynik wynosi " << wynik << endl;
+            break;
+        case 5:
+            wynik = pow(a, b);
+            cout << "Twój wynik wynosi " << wynik << endl;
+            break;
+        case 6:
+            wynik = pow(a, 1.0 / b);
+            cout << "Twój wynik wynosi " << wynik << endl;
+            break;
+        default:
+            cout << "Źle wybrana opcja" << endl;
+            break;
+    }
+} else {
+    cout << "Jedna z liczb jest równa 0" << endl;
+}
+}
+
